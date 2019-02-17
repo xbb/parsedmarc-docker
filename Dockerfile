@@ -1,6 +1,12 @@
-FROM pypy:3-6
+FROM pypy:3.5-7-slim
 
 ENV PARSEDMARC_VERSION 6.1.2
-RUN pip install -U parsedmarc==$PARSEDMARC_VERSION
+RUN apt-get update \
+    && apt-get install -y gcc \
+    && pip install -U parsedmarc==$PARSEDMARC_VERSION \
+    && rm -rf /root/.cache/ \
+    && apt-get purge -y gcc \
+    && apt-get autoremove -y \
+    && rm -rf /var/lib/{apt,dpkg}/
 
 CMD ["parsedmarc"]
