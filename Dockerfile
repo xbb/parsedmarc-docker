@@ -1,6 +1,6 @@
 FROM pypy:3.5-7-slim
 
-ENV PARSEDMARC_VERSION 6.3.2
+ENV PARSEDMARC_VERSION 6.4.0
 RUN apt-get update \
     && apt-get install -y gcc \
     && pip install -U parsedmarc==$PARSEDMARC_VERSION \
