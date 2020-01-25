@@ -28,7 +28,8 @@ services:
   image: "xbblabs/parsedmarc:latest"
   volumes:
    - ./parsedmarc.ini:/etc/parsedmarc.ini
-  command: "parsedmarc -c /etc/parsedmarc.ini"
+   - geoip-data:/usr/share/GeoIP:ro
+  command: ["parsedmarc", "-c", "/etc/parsedmarc.ini"]
   init: true
   restart: "unless-stopped"
 ```
