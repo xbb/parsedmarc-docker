@@ -1,4 +1,4 @@
-FROM pypy:3.5-7-slim
+FROM pypy:3.6-7-slim
 
 ENV PARSEDMARC_VERSION 6.11.0
 RUN apt-get update \
