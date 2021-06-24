@@ -1,6 +1,6 @@
 FROM pypy:3.6-7-slim
 
-ENV PARSEDMARC_VERSION 6.12.0
+ENV PARSEDMARC_VERSION 7.0.1
 RUN apt-get update \
     && apt-get -y upgrade \
     && apt-get install -y gcc libxml2 libxml2-dev libxslt1.1 libxslt1-dev zlib1g zlib1g-dev \
