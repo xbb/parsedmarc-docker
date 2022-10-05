@@ -1,6 +1,6 @@
 FROM pypy:3.9-7-slim
 
-ARG REF=26f43b33155ef109612a8a23de65ba3723b96b0b
+ARG REF=b86365225ec7dada8c7f1a922f46da73abd8b78d
 
 RUN apt-get update \
     && apt-get -y upgrade \
