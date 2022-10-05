@@ -11,4 +11,6 @@ RUN apt-get update \
     && apt-get autoremove -y --purge \
     && rm -rf /var/lib/{apt,dpkg}/
 
-CMD ["parsedmarc"]
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod 755 /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
