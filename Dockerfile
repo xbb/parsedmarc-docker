@@ -1,6 +1,6 @@
 FROM python:3.9-slim
 
-ARG REF=b10cc06441ab5c43882072a1a6b3ae90047b9a20
+ARG REF=b75259c58cc0a6a7b9b60312e0b6d574cba87571
 
 RUN apt-get update \
     && apt-get -y upgrade \
